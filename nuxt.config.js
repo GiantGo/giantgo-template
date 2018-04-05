@@ -5,8 +5,8 @@ module.exports = {
   head: {
     title: 'giantgo-nuxt',
     meta: [{
-        charset: 'utf-8'
-      },
+      charset: 'utf-8'
+    },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
@@ -37,6 +37,11 @@ module.exports = {
     '@/plugins/element-ui',
     '@/plugins/lodash'
   ],
+  generate: {
+    routes: [
+      '/forms/1385'
+    ]
+  },
   /*
    ** Build configuration
    */
@@ -45,7 +50,7 @@ module.exports = {
     /*
      ** Run ESLint on save
      */
-    extend(config, {
+    extend (config, {
       isDev,
       isClient
     }) {
