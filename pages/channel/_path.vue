@@ -4,6 +4,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
+          <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
+              <a :href="breadcrumb.path">{{breadcrumb.name}}</a>
+            </li>
+            <li class="active">{{category.name}}</li>
+          </ol>
           <div class="row">
             <div class="col-md-6" v-for="(list, index) in lists" :key="index">
               <div class="panel panel-less">
@@ -12,15 +19,6 @@
                   <a class="pull-right see-all" :href="'/' + list.type + '/' + encodeURIComponent(list.path)">More</a>
                 </div>
                 <div class="list-group list-group-less">
-                  <ins class="adsbygoogle"
-                       style="display:block"
-                       data-ad-format="fluid"
-                       data-ad-layout-key="-i2+e-f-4c+9b"
-                       data-ad-client="ca-pub-7524637416419319"
-                       data-ad-slot="5766598392"></ins>
-                  <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({})
-                  </script>
                   <a :href="content.href" class="list-group-item text-overflow"
                      v-for="(content, index) in list.contents"
                      v-if="index < 10"
@@ -40,6 +38,16 @@
                   </a>
                 </div>
               </div>
+              <!-- younagames -->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-format="fluid"
+                   data-ad-layout-key="-i2+e-f-4c+9b"
+                   data-ad-client="ca-pub-7524637416419319"
+                   data-ad-slot="5766598392"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({})
+              </script>
             </div>
           </div>
         </div>
@@ -61,6 +69,10 @@
     },
     data () {
       return {
+        category: {
+          name: '',
+          breadcrumb: []
+        },
         siteInfo: {
           codeFooter: ''
         },
@@ -71,9 +83,10 @@
     methods: {},
     async asyncData ({params}) {
       try {
-        let {data} = await axios.get('http://123.206.65.112/', {})
+        let {data} = await axios.get('http://123.206.65.112/' + params.path, {})
 
         return {
+          category: data.category,
           siteInfo: data.siteInfo,
           navigation: data.navigation,
           lists: data.lists
@@ -85,5 +98,6 @@
   }
 </script>
 
-<style>
+<style scoped>
+
 </style>

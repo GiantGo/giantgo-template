@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 module.exports = {
   /*
    ** Headers of the page
@@ -17,12 +19,11 @@ module.exports = {
       }
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'stylesheet', href: '/css/bootstrap.min.css'},
+      {rel: 'stylesheet', href: '/css/icon/iconfont.css'},
+      {rel: 'stylesheet', href: '/css/main.css'},
+    ],
   },
   /*
    ** Customize the progress bar color
@@ -30,14 +31,19 @@ module.exports = {
   loading: {
     color: '#3B8070'
   },
-  css: [
-    'element-ui/lib/theme-chalk/reset.css', 'element-ui/lib/theme-chalk/index.css'
-  ],
+  css: [],
   plugins: [
-    '@/plugins/element-ui', '@/plugins/lodash'
+    '@/plugins/lodash'
   ],
   generate: {
-    routes: ['/forms/1385']
+    routes: function () {
+      return axios.get('http://123.206.65.112/')
+        .then((res) => {
+          // return res.data.map((user) => {
+          //   return '/users/' + user.id
+          // })
+        })
+    }
   },
   /*
    ** Build configuration
