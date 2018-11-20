@@ -28,7 +28,9 @@
           <ul class="nav navbar-nav navbar-left">
             <li v-for="(nav, index) in navigation" :key="index" v-if="nav.isShow"
                 :class="{active: nav.current}">
-              <a :href="nav.path ? nav.path : nav.mixed.url" :title="nav.name">{{nav.name}}</a>
+              <a
+                :href="(nav.type ? ('/' + nav.type + '/' + nav._id) : '/') "
+                :title="nav.name">{{nav.name}}</a>
             </li>
           </ul>
         </div>
@@ -37,7 +39,7 @@
     <div class="container" v-for="(nav, index) in navigation" :key="index" v-if="nav.current && nav.nodes">
       <div class="navbar-sub-category">
         <a class="btn btn-link" v-for="(node, index) in nav.nodes" :key="index"
-           :href="'/' + node.type + '/' + encodeURIComponent(node.path)"
+           :href="'/' + node.type + '/' + node._id"
            :title="node.name"
            role="button">{{node.name}}</a>
       </div>

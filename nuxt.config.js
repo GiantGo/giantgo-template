@@ -33,15 +33,29 @@ module.exports = {
   },
   css: [],
   plugins: [
-    '@/plugins/lodash'
+    '@/plugins/lodash', '@/plugins/filters'
   ],
   generate: {
     routes: function () {
+      let columns = []
+      let channels = []
+      let contents = []
       return axios.get('http://123.206.65.112/')
         .then((res) => {
-          // return res.data.map((user) => {
-          //   return '/users/' + user.id
-          // })
+          res.data.navigation.forEach(nav => {
+            if (nav.type === 'column') {
+              columns.push('/column/' + nav._id)
+            } else if (nav.type === 'channel') {
+              channels.push('/channel/' + nav._id)
+            }
+          })
+          res.data.lists.forEach(list => {
+            list.contents.forEach(content => {
+              contents.push('/content/' + content._id)
+            })
+          })
+
+          return [].concat(columns, channels, contents)
         })
     }
   },

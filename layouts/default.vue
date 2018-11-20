@@ -1,5 +1,8 @@
 <template>
   <div>
+    <script src="/js/jquery-2.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <nuxt/>
   </div>
 </template>

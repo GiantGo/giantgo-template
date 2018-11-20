@@ -7,7 +7,7 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
-              <a :href="breadcrumb.path">{{breadcrumb.name}}</a>
+              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id">{{breadcrumb.name}}</a>
             </li>
             <li class="active">{{category.name}}</li>
           </ol>
@@ -22,7 +22,8 @@
             <script>
               (adsbygoogle = window.adsbygoogle || []).push({})
             </script>
-            <a v-for="(content, index) in list.contents" :key="index" :href="content.url"
+            <a v-for="(content, index) in list.contents" :key="index"
+               :href="'/content/' + content._id"
                class="list-group-item text-overflow">
               <div class="card-img">
                 <img alt="img" v-if="content.extensions" :src="content.extensions.thumbnail">
@@ -31,7 +32,7 @@
                 <section class="title">{{content.title}}</section>
                 <section>
                   <section class="author">
-                    <span>{{content.date}}</span>
+                    <span>{{content.date | formatTime}}</span>
                   </section>
                   <section class="social-bar">
                     <i class="iconfont icon-eye"></i>
@@ -75,10 +76,10 @@
     methods: {},
     async asyncData ({params}) {
       try {
-        let {data} = await axios.get('http://123.206.65.112' + params.path, {})
+        let {data} = await axios.get('http://123.206.65.112/column?id=' + params.id, {})
 
         return {
-          category: data.category,
+          category: {...data.category},
           siteInfo: data.siteInfo,
           navigation: data.navigation,
           list: data.list,

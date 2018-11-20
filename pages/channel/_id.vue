@@ -7,7 +7,7 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
-              <a :href="breadcrumb.path">{{breadcrumb.name}}</a>
+              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id">{{breadcrumb.name}}</a>
             </li>
             <li class="active">{{category.name}}</li>
           </ol>
@@ -16,11 +16,12 @@
               <div class="panel panel-less">
                 <div class="panel-heading">
                   {{list.name}}
-                  <a class="pull-right see-all" :href="'/' + list.type + '/' + encodeURIComponent(list.path)">More</a>
+                  <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id">More</a>
                 </div>
                 <div class="list-group list-group-less">
-                  <a :href="content.href" class="list-group-item text-overflow"
+                  <a class="list-group-item text-overflow"
                      v-for="(content, index) in list.contents"
+                     :href="'/content/' + content._id"
                      v-if="index < 10"
                      :key="index">
                     <div class="card-img">
@@ -83,10 +84,10 @@
     methods: {},
     async asyncData ({params}) {
       try {
-        let {data} = await axios.get('http://123.206.65.112/' + params.path, {})
+        let {data} = await axios.get('http://123.206.65.112/channel?id=' + params.id, {})
 
         return {
-          category: data.category,
+          category: {...data.category},
           siteInfo: data.siteInfo,
           navigation: data.navigation,
           lists: data.lists
