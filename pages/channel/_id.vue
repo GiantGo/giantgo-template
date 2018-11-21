@@ -7,7 +7,7 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
-              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id">{{breadcrumb.name}}</a>
+              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id + '/'">{{breadcrumb.name}}</a>
             </li>
             <li class="active">{{category.name}}</li>
           </ol>
@@ -16,12 +16,12 @@
               <div class="panel panel-less">
                 <div class="panel-heading">
                   {{list.name}}
-                  <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id">More</a>
+                  <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id + '/'">More</a>
                 </div>
                 <div class="list-group list-group-less">
                   <a class="list-group-item text-overflow"
                      v-for="(content, index) in list.contents"
-                     :href="'/content/' + content._id"
+                     :href="'/content/' + content._id + '/'"
                      v-if="index < 10"
                      :key="index">
                     <div class="card-img">

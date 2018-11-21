@@ -5,7 +5,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'giantgo-nuxt',
+    title: 'YOUNA Games',
     meta: [
       {
         charset: 'utf-8'
@@ -15,7 +15,7 @@ module.exports = {
       }, {
         hid: 'description',
         name: 'description',
-        content: 'Nuxt.js project'
+        content: 'YOUNA Games'
       }
     ],
     link: [
@@ -24,6 +24,11 @@ module.exports = {
       {rel: 'stylesheet', href: '/css/icon/iconfont.css'},
       {rel: 'stylesheet', href: '/css/main.css'},
     ],
+    script: [
+      {src: '/js/jquery-2.2.1.min.js'},
+      {src: '/js/bootstrap.min.js'},
+      {src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', async: true},
+    ]
   },
   /*
    ** Customize the progress bar color
@@ -36,10 +41,12 @@ module.exports = {
     '@/plugins/lodash', '@/plugins/filters'
   ],
   generate: {
+    interval: 500,
     routes: function () {
       let columns = []
       let channels = []
       let contents = []
+      let plays = []
       return axios.get('http://123.206.65.112/')
         .then((res) => {
           res.data.navigation.forEach(nav => {
@@ -52,10 +59,11 @@ module.exports = {
           res.data.lists.forEach(list => {
             list.contents.forEach(content => {
               contents.push('/content/' + content._id)
+              plays.push('/play/' + content._id)
             })
           })
 
-          return [].concat(columns, channels, contents)
+          return [].concat(columns, channels, contents, plays)
         })
     }
   },

@@ -7,9 +7,9 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
-              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id">{{breadcrumb.name}}</a>
+              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id + '/'">{{breadcrumb.name}}</a>
             </li>
-            <li><a :href="'/' + category.type + '/' + category._id">{{category.name}}</a></li>
+            <li><a :href="'/' + category.type + '/' + category._id + '/'">{{category.name}}</a></li>
             <li class="active">{{title}}</li>
           </ol>
           <div class="page-header text-center">
@@ -22,13 +22,11 @@
           <div class="well text-muted" v-if="abstract">{{abstract}}</div>
           <!-- younagames -->
           <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-format="fluid"
-               data-ad-layout-key="-fb+5w+4e-db+86"
+               style="display:inline-block;width:300px;height:250px"
                data-ad-client="ca-pub-7524637416419319"
-               data-ad-slot="8380843355"></ins>
+               data-ad-slot="7997100909"></ins>
           <script>
-            (adsbygoogle = window.adsbygoogle || []).push({})
+            (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
           <div class="detail-info">
             <div class="tag-tit">
@@ -54,9 +52,20 @@
           <div class="tags" v-if="tags.length">
             Tags：<span class="tag" v-for="(tag, index) in tags" :key="index">{{tag}}</span>
           </div>
-          <a class="play-btn" :href="'/play/' + id">
-            Play
-          </a>
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-format="fluid"
+               data-ad-layout-key="-i2+e-f-4c+9b"
+               data-ad-client="ca-pub-7524637416419319"
+               data-ad-slot="5766598392"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({})
+          </script>
+          <div>
+            <a class="play-btn" :href="'/play/' + id + '/'">
+              Play
+            </a>
+          </div>
         </div>
       </div>
     </div>

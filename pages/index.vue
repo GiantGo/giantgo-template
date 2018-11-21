@@ -9,7 +9,7 @@
               <div class="panel panel-less">
                 <div class="panel-heading">
                   {{list.name}}
-                  <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id">More</a>
+                  <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id + '/'">More</a>
                 </div>
                 <div class="list-group list-group-less">
                   <ins class="adsbygoogle"
@@ -23,7 +23,7 @@
                   </script>
                   <a class="list-group-item text-overflow"
                      v-for="(content, index) in list.contents"
-                     :href="'/content/' + content._id"
+                     :href="'/content/' + content._id + '/'"
                      v-if="index < 10"
                      :key="index">
                     <div class="card-img">

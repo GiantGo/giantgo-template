@@ -7,7 +7,7 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li v-for="(breadcrumb, index) in category.breadcrumb" :key="index">
-              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id">{{breadcrumb.name}}</a>
+              <a :href="'/' + breadcrumb.type + '/' + breadcrumb._id + '/'">{{breadcrumb.name}}</a>
             </li>
             <li class="active">{{category.name}}</li>
           </ol>
@@ -23,7 +23,7 @@
               (adsbygoogle = window.adsbygoogle || []).push({})
             </script>
             <a v-for="(content, index) in list.contents" :key="index"
-               :href="'/content/' + content._id"
+               :href="'/content/' + content._id + '/'"
                class="list-group-item text-overflow">
               <div class="card-img">
                 <img alt="img" v-if="content.extensions" :src="content.extensions.thumbnail">
