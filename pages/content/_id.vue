@@ -22,9 +22,11 @@
           <div class="well text-muted" v-if="abstract">{{abstract}}</div>
           <!-- younagames -->
           <ins class="adsbygoogle"
-               style="display:inline-block;width:300px;height:250px"
+               style="display:block"
                data-ad-client="ca-pub-7524637416419319"
-               data-ad-slot="7997100909"></ins>
+               data-ad-slot="5520069230"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>

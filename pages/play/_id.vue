@@ -1,15 +1,17 @@
 <template>
   <div>
     <object width="100%" height="100%" :data="extensions.url"></object>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-format="fluid"
-         data-ad-layout-key="-6t+ed+2i-1n-4w"
-         data-ad-client="ca-pub-7524637416419319"
-         data-ad-slot="2234756923"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({})
-    </script>
+    <div class="ads">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-i2+e-f-4c+9b"
+           data-ad-client="ca-pub-7524637416419319"
+           data-ad-slot="5766598392"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({})
+      </script>
+    </div>
   </div>
 </template>
 
@@ -46,5 +48,17 @@
 </script>
 
 <style scoped>
+  object {
+    position: absolute;
+    width: 100%;
+    height: 89%;
+  }
 
+  .ads {
+    position: fixed;
+    width: 100%;
+    background-color: #d5d5d5;
+    bottom: 0;
+    height: 11%;
+  }
 </style>
