@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navigation :navigation="navigation" :site-info="siteInfo"></navigation>
+    <!--<navigation :navigation="navigation" :site-info="siteInfo"></navigation>-->
     <div class="container">
       <div class="row">
         <div class="col-md-9">
@@ -20,13 +20,12 @@
             </p>
           </div>
           <div class="well text-muted" v-if="abstract">{{abstract}}</div>
-          <!-- younagames -->
           <ins class="adsbygoogle"
                style="display:block"
+               data-ad-format="fluid"
+               data-ad-layout-key="-72+eg+1g-3d+2z"
                data-ad-client="ca-pub-7524637416419319"
-               data-ad-slot="5520069230"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
+               data-ad-slot="5409166247"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
@@ -54,15 +53,15 @@
           <div class="tags" v-if="tags.length">
             Tags：<span class="tag" v-for="(tag, index) in tags" :key="index">{{tag}}</span>
           </div>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-format="fluid"
-               data-ad-layout-key="-i2+e-f-4c+9b"
-               data-ad-client="ca-pub-7524637416419319"
-               data-ad-slot="5766598392"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({})
-          </script>
+          <!--<ins class="adsbygoogle"-->
+          <!--style="display:block"-->
+          <!--data-ad-format="fluid"-->
+          <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
+          <!--data-ad-client="ca-pub-7524637416419319"-->
+          <!--data-ad-slot="5766598392"></ins>-->
+          <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+          <!--</script>-->
           <div>
             <a class="play-btn" :href="'/play/' + id + '/'">
               Play

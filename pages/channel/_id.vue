@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navigation :navigation="navigation" :site-info="siteInfo"></navigation>
+    <!--<navigation :navigation="navigation" :site-info="siteInfo"></navigation>-->
     <div class="container">
       <div class="row">
         <div class="col-md-9">

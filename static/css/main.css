@@ -210,6 +210,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 }
 
 .breadcrumb {
+    margin: 10px 0;
     background-color: #232323;
 }
 
