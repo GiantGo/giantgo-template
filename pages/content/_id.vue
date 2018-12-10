@@ -12,14 +12,6 @@
             <li><a :href="'/' + category.type + '/' + category._id + '/'">{{category.name}}</a></li>
             <li class="active">{{title}}</li>
           </ol>
-          <div class="page-header text-center">
-            <h5>{{title}}</h5>
-            <img class="logo" v-if="extensions" :src="extensions.thumbnail"/>
-            <p class="social-bar">
-              {{date | formatTime}}　<i class="iconfont icon-eye"></i> {{reading.total}}　
-            </p>
-          </div>
-          <div class="well text-muted" v-if="abstract">{{abstract}}</div>
           <ins class="adsbygoogle"
                style="display:block"
                data-ad-format="fluid"
@@ -27,42 +19,62 @@
                data-ad-client="ca-pub-7524637416419319"
                data-ad-slot="5409166247"></ins>
           <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({})
           </script>
-          <div class="detail-info">
-            <div class="tag-tit">
-              <span class="name">Details</span>
+          <div class="detail-info clearfix">
+            <div class="title">
+              <span class="name">{{title}}</span>
+            </div>
+            <div class="detail-thumbnail">
+              <img class="logo" v-if="extensions" :src="extensions.thumbnail"/>
             </div>
             <div class="details">
               <div class="items">
                 <span class="tit-name">Size:</span>
                 <span class="size">{{extensions.size}}</span></div>
               <div class="items">
-                <span class="tit-name">Version:</span>
-                <span class="size">{{extensions.version}}</span></div>
+                <span class="tit-name">Date:</span>
+                <span class="size">{{extensions.updateAt}}</span></div>
               <div class="items">
-                <span class="tit-name">Update Date:</span>
-                <span class="size">{{extensions.updateAt}}</span>
+                <div class="size">
+                  <div class="star-rate"></div>
+                </div>
               </div>
               <div class="items">
-                <span class="tit-name">Author:</span>
-                <span class="size">{{extensions.author}}</span>
+                <div class="size">
+                  <i class="iconfont icon-eye"></i> {{Number(reading.total).toLocaleString()}}
+                </div>
               </div>
             </div>
           </div>
+          <div class="comment-container">
+            <div class="title">
+              Comments
+            </div>
+            <div class="comments">
+              <div class="comment-item">
+                <div class="name">Spx</div>
+                <div class="content">哈哈哈哈哈哈哈哈</div>
+              </div>
+            </div>
+            <div class="comments">
+              <div class="comment-item">
+                <div class="name">Spx</div>
+                <div class="content">哈哈哈哈哈哈哈哈</div>
+              </div>
+            </div>
+            <div class="comments">
+              <div class="comment-item">
+                <div class="name">Spx</div>
+                <div class="content">哈哈哈哈哈哈哈哈</div>
+              </div>
+            </div>
+          </div>
+          <div class="well text-muted" v-if="abstract">{{abstract}}</div>
           <div class="tags" v-if="tags.length">
             Tags：<span class="tag" v-for="(tag, index) in tags" :key="index">{{tag}}</span>
           </div>
-          <!--<ins class="adsbygoogle"-->
-          <!--style="display:block"-->
-          <!--data-ad-format="fluid"-->
-          <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
-          <!--data-ad-client="ca-pub-7524637416419319"-->
-          <!--data-ad-slot="5766598392"></ins>-->
-          <!--<script>-->
-          <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
-          <!--</script>-->
-          <div>
+          <div class="play">
             <a class="play-btn" :href="'/play/' + id + '/'">
               Play
             </a>
