@@ -26,6 +26,18 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import "../assets/scss/colors";
 
+  .jumbotron {
+    background-color: $color02;
+  }
+
+  .jumbotron a {
+    color: $color10;
+  }
+
+  .clear-bottom-margin {
+    margin-bottom: 0;
+  }
 </style>

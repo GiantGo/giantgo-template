@@ -47,7 +47,9 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../../assets/scss/colors";
+
   object {
     position: absolute;
     width: 100%;
@@ -57,7 +59,7 @@
   .ads {
     position: fixed;
     width: 100%;
-    background-color: #d5d5d5;
+    background-color: $color07;
     bottom: 0;
     height: 11%;
   }

@@ -158,6 +158,211 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../../assets/scss/colors";
 
+  .detail-info {
+    margin-top: 10px;
+    border-top: 2px solid $color03;
+    border-bottom: 2px solid $color03;
+    padding: 10px;
+    background: $color02;
+    color: $color06;
+  }
+
+  .detail-info .title {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .detail-info .title .iconfont {
+    margin-left: 10px;
+  }
+
+  .detail-info .detail-thumbnail {
+    width: 35%;
+    float: left;
+    margin-top: 20px;
+  }
+
+  .detail-info .detail-thumbnail .items {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .star-rate {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAA70lEQVR4AdXUIQjCQBTGcYNgMAt2BGGdZbHY28BeLKvaBIPJYLHYMf/tbX2w9V62OgZj2wljjKHP3W5FvK/cHe8Hd+/gRmpgfgalwVHa1UKWlCyHwAuKizFkQowiZmIKt6gqW1Po1dAzglioJlYnZIbFGgeXM3fCFgy5c8bFYY3F7B2eUL1y+jgqrp7hinfEIetAGc7X5rAhkRkJm86uYhMJLMLWPgc7Ae56vCM3Ad76QF+AvhYyJW/Ky2aWM9XBVV1acGXOlaJer3TwUJUF2E2Xg2rnoINPUvaMW3cesyflqYMPFsJvsOAhQ/P8E3wB75uY7oxINXcAAAAASUVORK5CYII=) 0 0 repeat-x;
+    background-size: 20px;
+  }
+
+  .detail-info .detail-thumbnail img {
+    width: 100%;
+  }
+
+  .detail-info .details {
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    width: 65%;
+  }
+
+  .detail-info .details .items {
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+  }
+
+  .detail-info .details .items span {
+    font-size: 14px;
+  }
+
+  .detail-info .details .items .tit-name {
+    display: inline-block;
+    width: 40px;
+    color: $color04;
+  }
+
+  .detail-info .details .items .size {
+    text-align: start;
+    margin-left: 12px;
+  }
+
+  .detail-info .details .items .tit-name + .size {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .play {
+    height: 100px;
+  }
+
+  .play-btn {
+    position: relative;
+    display: inline-block;
+    top: 30px;
+    margin-left: -100px;
+    left: 50%;
+    right: 0;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    z-index: 999;
+    transform: translate(-50%, -90%);
+    animation: scales .5s infinite linear;
+    color: $color08;
+    background: $color10;
+  }
+
+  .comment-container {
+    padding-bottom: 10px;
+    background: $color02;
+    color: $color06;
+  }
+
+  .comment-container .comment-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    padding: 15px 10px;
+    border-top: 2px solid $color03;
+  }
+
+  .comment-container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .comment-container .comment-item .content {
+    margin-left: 10px;
+  }
+
+  @keyframes scales {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .content p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .content img,
+  .content iframe,
+  .content embed {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .content table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px
+  }
+
+  .content table > tbody > tr > td, .content table > tbody > tr > th, .content table > tfoot > tr > td, .content table > tfoot > tr > th,
+  .content table > thead > tr > td, .content table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd
+  }
+
+  .content table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd
+  }
+
+  .content table > caption + thead > tr:first-child > td, .content table > caption + thead > tr:first-child > th,
+  .content table > colgroup + thead > tr:first-child > td, .content table > colgroup + thead > tr:first-child > th,
+  .content table > thead:first-child > tr:first-child > td, .content table > thead:first-child > tr:first-child > th {
+    border-top: 0
+  }
+
+  .content table > tbody + tbody {
+    border-top: 2px solid #ddd
+  }
+
+  .well {
+    background: $color02;
+    color: $color06;
+    border: none;
+  }
+
+  .tags {
+    margin-top: 20px;
+    color: $color04;
+  }
+
+  .tag {
+    padding: 2px 5px;
+    border-radius: 5px;
+    background: $color04;
+    color: $color02;
+  }
 </style>

@@ -22,7 +22,6 @@ module.exports = {
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       {rel: 'stylesheet', href: '/css/bootstrap.min.css'},
       {rel: 'stylesheet', href: '/css/icon/iconfont.css'},
-      {rel: 'stylesheet', href: '/css/main.css'},
     ],
     script: [
       {src: '/js/jquery-2.2.1.min.js'},
@@ -36,9 +35,13 @@ module.exports = {
   loading: {
     color: '#3B8070'
   },
-  css: [],
+  css: [
+    // 项目里要使用的 SCSS 文件
+    '@/assets/scss/index.scss'
+  ],
   plugins: [
-    '@/plugins/lodash', '@/plugins/filters'
+    '@/plugins/lodash',
+    '@/plugins/filters'
   ],
   generate: {
     interval: 500,

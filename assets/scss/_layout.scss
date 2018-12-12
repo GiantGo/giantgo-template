@@ -1,0 +1,163 @@
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: .373333rem;
+  font-family: Roboto, Lato, sans-serif !important;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  background: $color01;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small,
+.h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small,
+h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small,
+.h5 .small, .h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small,
+.h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+  font-size: 65%
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small,
+.h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
+  font-size: 75%
+}
+
+h1, .h1 {
+  font-size: 28px
+}
+
+h2, .h2 {
+  font-size: 24px
+}
+
+h3, .h3 {
+  font-size: 21px
+}
+
+h4, .h4 {
+  font-size: 18px
+}
+
+h5, .h5 {
+  font-size: 14px
+}
+
+h6, .h6 {
+  font-size: 12px
+}
+
+.breadcrumb {
+  margin: 10px 0;
+  background-color: #232323;
+}
+
+.breadcrumb a {
+  color: $color10;
+}
+
+.list-group-item {
+  display: flex;
+  background: #353535;
+  border: 1px solid #232323;
+  border-width: 1px 0;
+  padding: 8px 10px;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+  background-color: #464646;
+}
+
+.list-group.list-group-less .card-img {
+  width: 65px;
+  height: 65px;
+}
+
+.list-group .card-img {
+  display: block;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  margin: auto 0;
+}
+
+.list-group .card-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.list-group .card-info {
+  display: flex;
+  width: 50.7%;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding: 5px 0px;
+  color: $color08;
+}
+
+.list-group .card-info .title {
+  font-size: 16px;
+}
+
+.list-group .card-info .author {
+  font-size: 12px;
+  color: #c3c3c3;
+}
+
+.list-group .card-info .social-bar {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: rgb(153, 153, 153);
+}
+
+.list-group .card-info .social-bar .iconfont {
+  margin-right: 5px;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+}
