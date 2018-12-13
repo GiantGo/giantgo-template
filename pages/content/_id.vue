@@ -16,8 +16,8 @@
                style="display:block"
                data-ad-format="fluid"
                data-ad-layout-key="-72+eg+1g-3d+2z"
-               data-ad-client="ca-pub-7524637416419319"
-               data-ad-slot="5409166247"></ins>
+               data-ad-client="ca-pub-1560934174894492"
+               data-ad-slot="7037537132"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({})
           </script>

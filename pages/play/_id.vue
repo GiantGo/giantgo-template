@@ -6,8 +6,8 @@
            style="display:block"
            data-ad-format="fluid"
            data-ad-layout-key="-i2+e-f-4c+9b"
-           data-ad-client="ca-pub-7524637416419319"
-           data-ad-slot="5766598392"></ins>
+           data-ad-client="ca-pub-1560934174894492"
+           data-ad-slot="6220893883"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({})
       </script>
