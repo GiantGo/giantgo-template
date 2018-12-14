@@ -47,24 +47,38 @@ module.exports = {
       let channels = []
       let contents = []
       let plays = []
-      return axios.get('http://123.206.65.112/')
-        .then((res) => {
-          res.data.navigation.forEach(nav => {
-            if (nav.type === 'column') {
-              columns.push('/column/' + nav._id)
-            } else if (nav.type === 'channel') {
-              channels.push('/channel/' + nav._id)
-            }
-          })
-          res.data.lists.forEach(list => {
-            list.contents.forEach(content => {
-              contents.push('/content/' + content._id)
-              plays.push('/play/' + content._id)
-            })
-          })
-
-          return [].concat(columns, channels, contents, plays)
+      return Promise.all([
+        axios({
+          method: 'get',
+          url: `http://123.206.65.112/api/categories`,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
+        }),
+        axios({
+          method: 'get',
+          url: `http://123.206.65.112/api/contents`,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
         })
+      ]).then(res => {
+        res[0].data.forEach(category => {
+          if (category.type === 'column') {
+            columns.push('/column/' + category._id)
+          } else if (category.type === 'channel') {
+            channels.push('/channel/' + category._id)
+          }
+        })
+        res[1].data.contents.forEach(content => {
+          contents.push('/content/' + content._id)
+          plays.push('/play/' + content._id)
+        })
+
+        return [].concat(columns, channels, contents, plays)
+      })
     }
   },
   /*
