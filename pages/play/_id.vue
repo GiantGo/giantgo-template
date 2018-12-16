@@ -59,7 +59,7 @@
   .ads {
     position: fixed;
     width: 100%;
-    background-color: $color07;
+    background-color: $text;
     bottom: 0;
     height: 11%;
   }

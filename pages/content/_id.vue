@@ -53,20 +53,20 @@
             </div>
             <div class="comments">
               <div class="comment-item">
-                <div class="name">Spx</div>
-                <div class="content">哈哈哈哈哈哈哈哈</div>
+                <div class="name">siler</div>
+                <div class="content">This game is so interesting.</div>
               </div>
             </div>
             <div class="comments">
               <div class="comment-item">
-                <div class="name">Spx</div>
-                <div class="content">哈哈哈哈哈哈哈哈</div>
+                <div class="name">eka</div>
+                <div class="content">Game ini sangat menarik.</div>
               </div>
             </div>
             <div class="comments">
               <div class="comment-item">
-                <div class="name">Spx</div>
-                <div class="content">哈哈哈哈哈哈哈哈</div>
+                <div class="name">kumar</div>
+                <div class="content">यह गेम बहुत दिलचस्प है।</div>
               </div>
             </div>
           </div>
@@ -163,11 +163,11 @@
 
   .detail-info {
     margin-top: 10px;
-    border-top: 2px solid $color03;
-    border-bottom: 2px solid $color03;
+    border-top: 2px solid $light-primary-color;
+    border-bottom: 2px solid $light-primary-color;
     padding: 10px;
-    background: $color02;
-    color: $color06;
+    background: $text;
+    color: $primary-text;
   }
 
   .detail-info .title {
@@ -224,7 +224,7 @@
   .detail-info .details .items .tit-name {
     display: inline-block;
     width: 40px;
-    color: $color04;
+    color: $secondary-text;
   }
 
   .detail-info .details .items .size {
@@ -257,14 +257,14 @@
     z-index: 999;
     transform: translate(-50%, -90%);
     animation: scales .5s infinite linear;
-    color: $color08;
-    background: $color10;
+    color: $text;
+    background: $primary-color;
   }
 
   .comment-container {
     padding-bottom: 10px;
-    background: $color02;
-    color: $color06;
+    background: $text;
+    color: $secondary-text;
   }
 
   .comment-container .comment-item {
@@ -273,7 +273,7 @@
     flex-direction: row;
     position: relative;
     padding: 15px 10px;
-    border-top: 2px solid $color03;
+    border-top: 2px solid $light-primary-color;
   }
 
   .comment-container .title {
@@ -349,20 +349,8 @@
   }
 
   .well {
-    background: $color02;
-    color: $color06;
+    background: $text;
+    color: $secondary-text;
     border: none;
-  }
-
-  .tags {
-    margin-top: 20px;
-    color: $color04;
-  }
-
-  .tag {
-    padding: 2px 5px;
-    border-radius: 5px;
-    background: $color04;
-    color: $color02;
   }
 </style>

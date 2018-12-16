@@ -88,18 +88,4 @@
 
 <style lang="scss" scoped>
   @import "../assets/scss/colors";
-
-  .panel-less, .panel-default {
-    border-color: $color03;
-  }
-
-  .panel-less > .panel-heading, .panel-default > .panel-heading {
-    color: $color10;
-    background-color: $color02;
-    border-color: $color02;
-  }
-
-  .panel-heading .see-all {
-    color: $color10;
-  }
 </style>

@@ -13,7 +13,7 @@ body {
   font-family: Helvetica, Arial, "Hiragino Sans GB", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  background: $color01;
+  background: $text;
 }
 
 a {
@@ -86,23 +86,42 @@ h6, .h6 {
 
 .breadcrumb {
   margin: 10px 0;
-  background-color: #232323;
+  background-color: $dark-primary-color;
+
+  & > .active {
+    color: $light-primary-color;
+  }
 }
 
 .breadcrumb a {
-  color: $color10;
+  color: $text;
+}
+
+.panel-less, .panel-default {
+  margin-top: 10px;
+  border-color: $light-primary-color;
+}
+
+.panel-less > .panel-heading, .panel-default > .panel-heading {
+  color: $text;
+  background-color: $dark-primary-color;
+  border-color: $dark-primary-color;
+}
+
+.panel-heading .see-all {
+  color: $text;
 }
 
 .list-group-item {
   display: flex;
-  background: #353535;
-  border: 1px solid #232323;
+  background: $text;
+  border: 1px solid $light-primary-color;
   border-width: 1px 0;
   padding: 8px 10px;
 }
 
 a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
-  background-color: #464646;
+  background-color: $light-primary-color;
 }
 
 .list-group.list-group-less .card-img {
@@ -132,7 +151,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
   justify-content: space-between;
   margin-left: 20px;
   padding: 5px 0px;
-  color: $color08;
+  color: $primary-text;
 }
 
 .list-group .card-info .title {

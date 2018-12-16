@@ -71,26 +71,6 @@
 <style lang="scss" scoped>
   @import "../assets/scss/colors";
 
-  .page-header {
-    padding-bottom: 9px;
-    margin: 20px 0 10px;
-    border-bottom: none;
-  }
-
-  .page-header h1 {
-    color: $color08;
-  }
-
-  .page-header .logo {
-    max-width: 120px;
-    max-height: 120px;
-  }
-
-  .page-header .social-bar {
-    margin: 10px 0 10px;
-    color: #adadad;
-  }
-
   .lead {
     margin-bottom: 20px;
     font-size: 21px;
@@ -109,39 +89,39 @@
   }
 
   .navbar-blue {
-    background-color: $color02;
+    background-color: $light-primary-color;
     border: none;
     border-radius: 0;
   }
 
   .navbar-blue .navbar-header {
-    background-color: $color00;
-    border-bottom: 1px solid $color02;
+    background-color: $dark-primary-color;
+    border-bottom: 1px solid $primary-color;
   }
 
   .navbar-blue .navbar-header .navbar-toggle:focus,
   .navbar-blue .navbar-header .navbar-toggle:hover {
-    background-color: $color03;
-    border-color: $color03;
+    background-color: $dark-primary-color;
+    border-color: $primary-color;
   }
 
   .navbar-blue .navbar-toggle .icon-bar {
-    background-color: $color10;
+    background-color: $dark-primary-color;
   }
 
   .navbar-blue .navbar-nav > li > a {
-    color: $color07;
+    color: $dark-primary-color;
   }
 
   .navbar-blue .navbar-nav > li > a:focus,
   .navbar-blue .navbar-nav > li > a:hover {
-    background-color: $color03;
+    background-color: $dark-primary-color;
   }
 
   .navbar-blue .navbar-nav > .active > a,
   .navbar-blue .navbar-nav > .active > a:focus,
   .navbar-blue .navbar-nav > .active > a:hover {
-    background-color: $color03;
+    background-color: $dark-primary-color;
   }
 
   .navbar-blue .navbar-collapse,

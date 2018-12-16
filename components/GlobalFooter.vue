@@ -30,11 +30,15 @@
   @import "../assets/scss/colors";
 
   .jumbotron {
-    background-color: $color02;
+    background-color: $dark-primary-color;
+
+    .text-muted {
+      color: $primary-text;
+    }
   }
 
   .jumbotron a {
-    color: $color10;
+    color: $primary-text;
   }
 
   .clear-bottom-margin {
