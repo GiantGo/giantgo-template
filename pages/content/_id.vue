@@ -12,15 +12,6 @@
             <li><a :href="'/' + category.type + '/' + category._id + '/'">{{category.name}}</a></li>
             <li class="active">{{title}}</li>
           </ol>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-format="fluid"
-               data-ad-layout-key="-72+eg+1g-3d+2z"
-               data-ad-client="ca-pub-1560934174894492"
-               data-ad-slot="7037537132"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({})
-          </script>
           <div class="detail-info clearfix">
             <div class="title">
               <span class="name">{{title}}</span>
@@ -47,6 +38,15 @@
               </div>
             </div>
           </div>
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-format="fluid"
+               data-ad-layout-key="-72+eg+1g-3d+2z"
+               data-ad-client="ca-pub-1560934174894492"
+               data-ad-slot="7037537132"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({})
+          </script>
           <div class="comment-container">
             <div class="title">
               Comments
