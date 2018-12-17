@@ -16,6 +16,15 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: 'YOUNA Games'
+      }, {
+        'http-equiv': 'Pragma',
+        'content': 'no-cache',
+      }, {
+        'http-equiv': 'Cache-Control',
+        'content': 'no-cache',
+      }, {
+        'http-equiv': 'Expires',
+        'content': '0',
       }
     ],
     link: [
@@ -27,6 +36,7 @@ module.exports = {
       {src: '/js/jquery-2.2.1.min.js'},
       {src: '/js/bootstrap.min.js'},
       {src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', async: true},
+      {src: '/js/common.js'},
     ]
   },
   /*
@@ -37,7 +47,7 @@ module.exports = {
   },
   css: [
     // 项目里要使用的 SCSS 文件
-    '@/assets/scss/index.scss'
+    '@/assets/scss/index.scss',
   ],
   plugins: [
     '@/plugins/lodash',

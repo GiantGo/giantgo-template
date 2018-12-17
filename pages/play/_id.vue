@@ -2,15 +2,15 @@
   <div>
     <object width="100%" height="100%" :data="extensions.url"></object>
     <div class="ads">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-format="fluid"
-           data-ad-layout-key="-i2+e-f-4c+9b"
-           data-ad-client="ca-pub-1560934174894492"
-           data-ad-slot="6220893883"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({})
-      </script>
+      <!--<ins class="adsbygoogle"-->
+           <!--style="display:block"-->
+           <!--data-ad-format="fluid"-->
+           <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
+           <!--data-ad-client="ca-pub-1560934174894492"-->
+           <!--data-ad-slot="6220893883"></ins>-->
+      <!--<script>-->
+        <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+      <!--</script>-->
     </div>
   </div>
 </template>

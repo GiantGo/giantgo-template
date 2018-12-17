@@ -27,26 +27,24 @@
                 <span class="tit-name">Date:</span>
                 <span class="size">{{extensions.updateAt}}</span></div>
               <div class="items">
-                <div class="size">
-                  <div class="star-rate"></div>
-                </div>
+                <rate :length="5" v-model="rate"></rate>
               </div>
               <div class="items">
-                <div class="size">
+                <span class="size">
                   <i class="iconfont icon-eye"></i> {{Number(reading.total).toLocaleString()}}
-                </div>
+                </span>
               </div>
             </div>
           </div>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-format="fluid"
-               data-ad-layout-key="-72+eg+1g-3d+2z"
-               data-ad-client="ca-pub-1560934174894492"
-               data-ad-slot="7037537132"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({})
-          </script>
+          <!--<ins class="adsbygoogle"-->
+          <!--style="display:block"-->
+          <!--data-ad-format="fluid"-->
+          <!--data-ad-layout-key="-72+eg+1g-3d+2z"-->
+          <!--data-ad-client="ca-pub-1560934174894492"-->
+          <!--data-ad-slot="7037537132"></ins>-->
+          <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+          <!--</script>-->
           <div class="comment-container">
             <div class="title">
               Comments
@@ -90,11 +88,13 @@
   import Navigation from '~/components/Navigation.vue'
   import axios from 'axios'
   import GlobalFooter from '~/components/GlobalFooter'
+  import rate from '~/components/Rate'
 
   export default {
     components: {
       GlobalFooter,
-      Navigation
+      Navigation,
+      rate
     },
     data () {
       return {
@@ -125,6 +125,7 @@
         content: '',
         tags: [],
         extensions: {},
+        rate: 5
       }
     },
     methods: {},
@@ -163,8 +164,7 @@
 
   .detail-info {
     margin-top: 10px;
-    border-top: 2px solid $light-primary-color;
-    border-bottom: 2px solid $light-primary-color;
+    border-top: 1px solid $divider-color;
     padding: 10px;
     background: $text;
     color: $primary-text;
@@ -209,6 +209,7 @@
     overflow: hidden;
     float: left;
     width: 65%;
+    text-align: center;
   }
 
   .detail-info .details .items {
@@ -272,8 +273,8 @@
     justify-content: space-between;
     flex-direction: row;
     position: relative;
-    padding: 15px 10px;
-    border-top: 2px solid $light-primary-color;
+    padding: 20px 10px 2px 10px;
+    border-bottom: 1px solid $divider-color;
   }
 
   .comment-container .title {
@@ -281,6 +282,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid $divider-color;
   }
 
   .comment-container .comment-item .content {
