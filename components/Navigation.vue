@@ -89,20 +89,24 @@
   }
 
   .navbar-blue {
-    background-color: $light-primary-color;
+    background-color: $dark-primary-color;
     border: none;
     border-radius: 0;
   }
 
   .navbar-blue .navbar-header {
     background-color: $dark-primary-color;
-    border-bottom: 1px solid $primary-color;
+    border-bottom: 1px solid $light-primary-color;
   }
 
   .navbar-blue .navbar-header .navbar-toggle:focus,
   .navbar-blue .navbar-header .navbar-toggle:hover {
-    background-color: $dark-primary-color;
+    background-color: $light-primary-color;
     border-color: $primary-color;
+  }
+
+  .navbar-toggle {
+    background-color: $light-primary-color;
   }
 
   .navbar-blue .navbar-toggle .icon-bar {
@@ -110,7 +114,7 @@
   }
 
   .navbar-blue .navbar-nav > li > a {
-    color: $dark-primary-color;
+    color: $text;
   }
 
   .navbar-blue .navbar-nav > li > a:focus,

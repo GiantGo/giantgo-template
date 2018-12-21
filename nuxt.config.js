@@ -5,7 +5,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'YOUNA Games',
+    title: '1008 PLAY',
     meta: [
       {
         charset: 'utf-8'
@@ -15,7 +15,7 @@ module.exports = {
       }, {
         hid: 'description',
         name: 'description',
-        content: 'YOUNA Games'
+        content: '1008 PLAY'
       }, {
         'http-equiv': 'Pragma',
         'content': 'no-cache',

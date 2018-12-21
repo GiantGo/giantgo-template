@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!--<navigation :navigation="navigation" :site-info="siteInfo"></navigation>-->
+    <navigation :navigation="navigation" :site-info="siteInfo"></navigation>
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
           <div class="row">
             <div class="col-md-6" v-for="(list, index) in lists" :key="index">
               <div class="panel panel-less">
@@ -12,15 +12,15 @@
                   <a class="pull-right see-all" :href="'/' + list.type + '/' + list._id + '/'">More</a>
                 </div>
                 <div class="list-group list-group-less">
-                  <!--<ins class="adsbygoogle"-->
-                       <!--style="display:block"-->
-                       <!--data-ad-format="fluid"-->
-                       <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
-                       <!--data-ad-client="ca-pub-1560934174894492"-->
-                       <!--data-ad-slot="2326591342"></ins>-->
-                  <!--<script>-->
-                    <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
-                  <!--</script>-->
+                  <ins class="adsbygoogle"
+                       style="display:block"
+                       data-ad-format="fluid"
+                       data-ad-layout-key="-i2+e-f-4c+9b"
+                       data-ad-client="ca-pub-1560934174894492"
+                       data-ad-slot="2326591342"></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({})
+                  </script>
                   <a class="list-group-item text-overflow"
                      v-for="(content, index) in list.contents"
                      :href="'/content/' + content._id + '/'"
