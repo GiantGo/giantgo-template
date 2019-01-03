@@ -36,15 +36,15 @@
               </div>
             </div>
           </div>
-          <!--<ins class="adsbygoogle"-->
-          <!--style="display:block"-->
-          <!--data-ad-format="fluid"-->
-          <!--data-ad-layout-key="-72+eg+1g-3d+2z"-->
-          <!--data-ad-client="ca-pub-1560934174894492"-->
-          <!--data-ad-slot="7037537132"></ins>-->
-          <!--<script>-->
-          <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
-          <!--</script>-->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-format="fluid"
+               data-ad-layout-key="-72+eg+1g-3d+2z"
+               data-ad-client="ca-pub-3164628254889272"
+               data-ad-slot="5463726279"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({})
+          </script>
           <div class="comment-container">
             <div class="title">
               Comments

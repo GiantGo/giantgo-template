@@ -36,8 +36,14 @@ module.exports = {
       {src: '/js/jquery-2.2.1.min.js'},
       {src: '/js/bootstrap.min.js'},
       {src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', async: true},
-      {src: '/js/common.js'},
-    ]
+//       {
+//         innerHTML: `(adsbygoogle = window.adsbygoogle || []).push({
+//   google_ad_client: 'ca-pub-3164628254889272',
+//   enable_page_level_ads: true
+// })`, type: 'text/javascript'
+//       }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
   /*
    ** Customize the progress bar color
@@ -83,6 +89,8 @@ module.exports = {
             columns.push('/column/' + category._id)
           } else if (category.type === 'channel') {
             channels.push('/channel/' + category._id)
+          } else if (category.type === 'page') {
+            channels.push('/page/' + category._id)
           }
         })
         res[1].data.contents.forEach(content => {

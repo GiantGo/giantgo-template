@@ -15,28 +15,28 @@
             <div class="col-md-6">
               <game-panel v-for="(list, index) in lists" :key="index" v-if="index % 2 === 0" :list="list"></game-panel>
               <!-- younagames -->
-              <!--<ins class="adsbygoogle"-->
-              <!--style="display:block"-->
-              <!--data-ad-format="fluid"-->
-              <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
-              <!--data-ad-client="ca-pub-1560934174894492"-->
-              <!--data-ad-slot="2326591342"></ins>-->
-              <!--<script>-->
-              <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
-              <!--</script>-->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-format="fluid"
+                   data-ad-layout-key="-hz+a-v-4h+ba"
+                   data-ad-client="ca-pub-3164628254889272"
+                   data-ad-slot="1252663305"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({})
+              </script>
             </div>
             <div class="col-md-6">
               <game-panel v-for="(list, index) in lists" :key="index" v-if="index % 2 === 1" :list="list"></game-panel>
               <!-- younagames -->
-              <!--<ins class="adsbygoogle"-->
-              <!--style="display:block"-->
-              <!--data-ad-format="fluid"-->
-              <!--data-ad-layout-key="-i2+e-f-4c+9b"-->
-              <!--data-ad-client="ca-pub-1560934174894492"-->
-              <!--data-ad-slot="2326591342"></ins>-->
-              <!--<script>-->
-              <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
-              <!--</script>-->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-format="fluid"
+                   data-ad-layout-key="-hz+a-v-4h+ba"
+                   data-ad-client="ca-pub-3164628254889272"
+                   data-ad-slot="1252663305"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({})
+              </script>
             </div>
           </div>
         </div>
@@ -72,6 +72,17 @@
       }
     },
     methods: {},
+    head: {
+      script: [
+        {
+          innerHTML: `(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-3164628254889272',
+  enable_page_level_ads: true
+})`, type: 'text/javascript'
+        }
+      ],
+      __dangerouslyDisableSanitizers: ['script']
+    },
     async asyncData ({params}) {
       try {
         let {data} = await axios.get('http://123.206.65.112/channel?id=' + params.id, {})
