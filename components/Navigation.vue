@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand visible-xs-block" href="/" :title="siteInfo.title">
-            <img height="20" :alt="siteInfo.title" src="/img/logo.png">
+            <i class="iconfont icon-home"></i>
           </a>
         </div>
 
@@ -84,7 +84,7 @@
   }
 
   .navbar-sub-category {
-    margin-top: -15px;
+    margin-top: 0;
     margin-bottom: -15px;
   }
 
@@ -92,6 +92,7 @@
     background-color: $dark-primary-color;
     border: none;
     border-radius: 0;
+    margin-bottom: 0;
   }
 
   .navbar-blue .navbar-header {
@@ -99,14 +100,18 @@
     border-bottom: 1px solid $light-primary-color;
   }
 
+  .navbar-blue .navbar-header .icon-home {
+    color: $text;
+    font-size: 22px;
+  }
+
   .navbar-blue .navbar-header .navbar-toggle:focus,
   .navbar-blue .navbar-header .navbar-toggle:hover {
-    background-color: $light-primary-color;
-    border-color: $primary-color;
+    background-color: $text;
   }
 
   .navbar-toggle {
-    background-color: $light-primary-color;
+    background-color: $text;
   }
 
   .navbar-blue .navbar-toggle .icon-bar {

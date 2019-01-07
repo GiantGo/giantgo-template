@@ -10,7 +10,9 @@
   import GameContent from '~/components/GameContent.vue'
 
   export default {
-    components: {GameContent},
+    components: {
+      GameContent
+    },
     data () {
       return {
         id: '',
@@ -46,10 +48,19 @@
     methods: {},
     async asyncData ({params}) {
       try {
-        let {data} = await axios.get('http://123.206.65.112/content?id=' + params.id, {})
+        let feature = await axios({
+          method: 'get',
+          url: 'http://123.206.65.112/api/features/' + params.id,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
+        })
+
+        let {data} = await axios.get('http://123.206.65.112/content?id=' + feature.data.extensions.contentId, {})
 
         return {
-          id: params.id,
+          id: feature.data.extensions.contentId,
           category: data.category,
           siteInfo: data.siteInfo,
           navigation: data.navigation,
@@ -75,4 +86,5 @@
 </script>
 
 <style lang="scss" scoped>
+
 </style>

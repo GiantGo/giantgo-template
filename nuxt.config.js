@@ -66,6 +66,7 @@ module.exports = {
       let channels = []
       let contents = []
       let plays = []
+      let features = []
       return Promise.all([
         axios({
           method: 'get',
@@ -78,6 +79,14 @@ module.exports = {
         axios({
           method: 'get',
           url: `http://123.206.65.112/api/contents`,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
+        }),
+        axios({
+          method: 'get',
+          url: `http://123.206.65.112/api/features`,
           data: {},
           headers: {
             Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
@@ -96,6 +105,10 @@ module.exports = {
         res[1].data.contents.forEach(content => {
           contents.push('/content/' + content._id)
           plays.push('/play/' + content._id)
+        })
+
+        res[2].data.forEach(feature => {
+          features.push('/feature/' + feature._id)
         })
 
         return [].concat(columns, channels, contents, plays)

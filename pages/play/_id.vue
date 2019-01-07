@@ -1,5 +1,17 @@
 <template>
   <div>
+    <nav class="navbar navbar-blue">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand visible-xs-block" title="back" :href="'/content/' + id + '/'">
+            <i class="iconfont icon-i-back"></i>
+          </a>
+          <a class="navbar-brand visible-xs-block download" title="download" :href="extensions.downloadUrl">
+            <i class="iconfont icon-download"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
     <object width="100%" height="100%" :data="extensions.url"></object>
     <div class="ads">
       <ins class="adsbygoogle"
@@ -38,6 +50,9 @@
         let {data} = await axios.get('http://123.206.65.112/content?id=' + params.id, {})
 
         return {
+          id: params.id,
+          siteInfo: data.siteInfo,
+          navigation: data.navigation,
           extensions: data.extensions
         }
       } catch (e) {
@@ -50,10 +65,27 @@
 <style lang="scss" scoped>
   @import "../../assets/scss/colors";
 
+  .navbar-blue {
+    background-color: $dark-primary-color;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+
+    .iconfont {
+      font-size: 22px;
+      font-weight: bold;
+      color: $text;
+    }
+
+    .download {
+      float: right;
+    }
+  }
+
   object {
     position: absolute;
     width: 100%;
-    height: 89%;
+    height: calc(89% - 50px);
   }
 
   .ads {
