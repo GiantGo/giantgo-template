@@ -24,21 +24,15 @@
             </div>
           </div>
           <div class="game-download">
-            <div class="game-download-item">
-              <a :href="extensions.downloadUrl">
-                <img alt="download" src="/img/Google_Play_Banner.png"/>
-              </a>
-            </div>
-            <div class="game-download-item">
-              <a :href="extensions.downloadUrl">
-                <img alt="download" src="/img/Google_Play_Banner.png"/>
-              </a>
-            </div>
-            <div class="game-download-item">
-              <a :href="extensions.downloadUrl">
-                <img alt="download" src="/img/Google_Play_Banner.png"/>
-              </a>
-            </div>
+            <a :href="extensions.downloadUrl">
+              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            </a>
+            <a :href="extensions.downloadUrl">
+              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            </a>
+            <a :href="extensions.downloadUrl">
+              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            </a>
           </div>
           <ins class="adsbygoogle"
                style="display:block"
@@ -164,24 +158,20 @@
 
   .game-download {
     width: auto;
+    height: 40px;
     padding: 0 10px;
-
-    .game-download-item {
-      width: 33%;
-      height: 37px;
-      float: left;
-      text-align: center;
-    }
+    text-align: center;
 
     a {
       display: inline-block;
-      width: 100%;
+      width: 33%;
       height: 100%;
     }
 
     img {
       width: auto;
       height: 100%;
+      max-width: 100%;
     }
   }
 
