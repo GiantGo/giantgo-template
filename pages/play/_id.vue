@@ -1,5 +1,16 @@
 <template>
   <div>
+    <header>
+      <div class="icon-btn">
+        <a title="back" :href="'/content/' + id + '/'">
+          <i class="iconfont icon-back"></i>
+        </a>
+      </div>
+      <a class="download" title="download" href="https://play.google.com/store/apps/details?id=com.games.g2048">
+        <img alt="download" src="/img/googleplay-play.png"/>
+      </a>
+      <div class="icon-btn"></div>
+    </header>
     <object width="100%" height="100%" :data="extensions.url"></object>
     <div class="ads">
       <ins class="adsbygoogle"
@@ -38,6 +49,9 @@
         let {data} = await axios.get('http://123.206.65.112/content?id=' + params.id, {})
 
         return {
+          id: params.id,
+          siteInfo: data.siteInfo,
+          navigation: data.navigation,
           extensions: data.extensions
         }
       } catch (e) {
@@ -47,11 +61,39 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #232323;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    .icon-btn {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+    .iconfont {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .download {
+      height: 100%;
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+
   object {
     position: absolute;
     width: 100%;
-    height: 89%;
+    height: calc(89% - 50px);
   }
 
   .ads {

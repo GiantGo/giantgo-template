@@ -47,6 +47,7 @@ module.exports = {
       let channels = []
       let contents = []
       let plays = []
+      let features = []
       return Promise.all([
         axios({
           method: 'get',
@@ -63,6 +64,14 @@ module.exports = {
           headers: {
             Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
           }
+        }),
+        axios({
+          method: 'get',
+          url: `http://123.206.65.112/api/features`,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
         })
       ]).then(res => {
         res[0].data.forEach(category => {
@@ -70,6 +79,8 @@ module.exports = {
             columns.push('/column/' + category._id)
           } else if (category.type === 'channel') {
             channels.push('/channel/' + category._id)
+          } else if (category.type === 'page') {
+            channels.push('/page/' + category._id)
           }
         })
         res[1].data.contents.forEach(content => {
@@ -77,7 +88,11 @@ module.exports = {
           plays.push('/play/' + content._id)
         })
 
-        return [].concat(columns, channels, contents, plays)
+        res[2].data.forEach(feature => {
+          features.push('/feature/' + feature._id)
+        })
+
+        return [].concat(columns, channels, contents, plays, features)
       })
     }
   },

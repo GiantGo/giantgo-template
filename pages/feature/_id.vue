@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <game-content :id="id" :category="category" :site-info="siteInfo" :navigation="navigation"
-                  :readingList="readingList" :title="title" :url="url" :href="href" :user="user" :date="date"
-                  :reading="reading" :thumbnail="thumbnail" :media="media" :abstract="abstract" :content="content"
-                  :tags="tags" :extensions="extensions"></game-content>
-  </div>
+  <game-content :id="id" :category="category" :site-info="siteInfo" :navigation="navigation"
+                :readingList="readingList" :title="title" :url="url" :href="href" :user="user" :date="date"
+                :reading="reading" :thumbnail="thumbnail" :media="media" :abstract="abstract" :content="content"
+                :tags="tags" :extensions="extensions"></game-content>
 </template>
 
 <script>
   import axios from 'axios'
-  import GameContent from '../../components/GameContent'
+  import GameContent from '~/components/GameContent.vue'
 
   export default {
     components: {
@@ -44,15 +42,23 @@
         content: '',
         tags: [],
         extensions: {},
+        rate: 5
       }
     },
     methods: {},
     async asyncData ({params}) {
       try {
-        let {data} = await axios.get('http://123.206.65.112/content?id=' + params.id, {})
-
+        let feature = await axios({
+          method: 'get',
+          url: 'http://123.206.65.112/api/features/' + params.id,
+          data: {},
+          headers: {
+            Cookie: 'nodercmsSid=s%3A4gl9cR8lU3L29TMIj3KcoT4mKRTRBxo4.XGuj0BeIUbDJ0ovOBgDVkRVSxokjfSnooZ6V%2BxyQxhQ'
+          }
+        })
+        let {data} = await axios.get('http://123.206.65.112/content?id=' + feature.data.extensions.contentId, {})
         return {
-          id: params.id,
+          id: feature.data.extensions.contentId,
           category: data.category,
           siteInfo: data.siteInfo,
           navigation: data.navigation,
@@ -77,6 +83,5 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>
