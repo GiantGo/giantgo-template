@@ -1,17 +1,16 @@
 <template>
   <div>
-    <nav class="navbar navbar-blue">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand visible-xs-block" title="back" :href="'/content/' + id + '/'">
-            <i class="iconfont icon-i-back"></i>
-          </a>
-          <a class="navbar-brand visible-xs-block download" title="download" :href="extensions.downloadUrl">
-            <i class="iconfont icon-download"></i>
-          </a>
-        </div>
+    <header>
+      <div class="icon-btn">
+        <a title="back" :href="'/content/' + id + '/'">
+          <i class="iconfont icon-back"></i>
+        </a>
       </div>
-    </nav>
+      <a class="download" title="download" :href="extensions.downloadUrl">
+        <img alt="download" src="/img/googleplay-play.png"/>
+      </a>
+      <div class="icon-btn"></div>
+    </header>
     <object width="100%" height="100%" :data="extensions.url"></object>
     <div class="ads">
       <ins class="adsbygoogle"
@@ -65,20 +64,35 @@
 <style lang="scss" scoped>
   @import "../../assets/scss/colors";
 
-  .navbar-blue {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: $dark-primary-color;
     border: none;
     border-radius: 0;
     margin-bottom: 0;
 
+    .icon-btn {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+
     .iconfont {
-      font-size: 22px;
+      font-size: 30px;
       font-weight: bold;
       color: $text;
     }
 
     .download {
-      float: right;
+      height: 100%;
+
+      img {
+        max-height: 40px;
+      }
     }
   }
 

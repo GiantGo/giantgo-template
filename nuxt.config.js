@@ -111,7 +111,7 @@ module.exports = {
           features.push('/feature/' + feature._id)
         })
 
-        return [].concat(columns, channels, contents, plays)
+        return [].concat(columns, channels, contents, plays, features)
       })
     }
   },

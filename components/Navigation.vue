@@ -1,14 +1,5 @@
 <template>
   <div>
-    <div class="container hidden-xs">
-      <div class="row">
-        <div class="col-md-3">
-          <a class="brand" href="/" :title="siteInfo.title">
-            <img height="36" :alt="siteInfo.title" src="/img/logo.png">
-          </a>
-        </div>
-      </div>
-    </div>
     <nav class="navbar navbar-blue">
       <div class="container">
         <div class="navbar-header">

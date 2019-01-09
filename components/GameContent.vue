@@ -24,14 +24,14 @@
             </div>
           </div>
           <div class="game-download">
-            <a :href="extensions.downloadUrl">
-              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            <a href="https://play.google.com/store/apps/details?id=com.games.g2048">
+              <img alt="download" src="/img/googleplay1.png"/>
             </a>
-            <a :href="extensions.downloadUrl">
-              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            <a href="https://play.google.com/store/apps/details?id=com.games.g2048">
+              <img alt="download" src="/img/googleplay2.png"/>
             </a>
-            <a :href="extensions.downloadUrl">
-              <img alt="download" src="/img/Google_Play_Banner.png"/>
+            <a href="https://play.google.com/store/apps/details?id=com.games.g2048">
+              <img alt="download" src="/img/googleplay3.png"/>
             </a>
           </div>
           <ins class="adsbygoogle"
@@ -102,10 +102,10 @@
       title: String,
       url: String,
       href: String,
-      user: String,
+      user: Object,
       date: String,
-      reading: String,
-      thumbnail: String,
+      reading: Object,
+      thumbnail: Object,
       media: Array,
       abstract: String,
       content: String,
