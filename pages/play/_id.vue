@@ -6,7 +6,7 @@
           <i class="iconfont icon-back"></i>
         </a>
       </div>
-      <a class="download" title="download" :href="extensions.downloadUrl">
+      <a class="download" title="download" href="https://play.google.com/store/apps/details?id=com.games.g2048">
         <img alt="download" src="/img/googleplay-play.png"/>
       </a>
       <div class="icon-btn"></div>

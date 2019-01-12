@@ -21,7 +21,11 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
-db.getCollection('contents').find().forEach(function(doc) {
-doc.reading.total = doc.reading.total + parseInt(Math.random()*(10000-20000)+10000);
-db.contents.save(doc);
-});
+  db.getCollection('contents').find().forEach(function(doc) {
+    if (doc.reading.total < 100) {
+    doc.reading.total = doc.reading.total + parseInt(Math.random()*(1000000-2000000)+1000000);
+    } else {
+      doc.reading.total = doc.reading.total + parseInt(Math.random()*(10000-20000)+10000);
+    }
+    db.contents.save(doc);
+  });
