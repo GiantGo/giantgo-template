@@ -41,7 +41,7 @@ module.exports = {
     '@/plugins/lodash', '@/plugins/filters'
   ],
   generate: {
-    interval: 500,
+    interval: 1000,
     routes: function () {
       let columns = []
       let channels = []
