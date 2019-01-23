@@ -13,15 +13,15 @@
           </ol>
           <div class="list-group list-group-less">
             <!-- younagames -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-hz+a-v-4h+ba"
-                 data-ad-client="ca-pub-3164628254889272"
-                 data-ad-slot="1252663305"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({})
-            </script>
+            <!--<ins class="adsbygoogle"-->
+                 <!--style="display:block"-->
+                 <!--data-ad-format="fluid"-->
+                 <!--data-ad-layout-key="-hz+a-v-4h+ba"-->
+                 <!--data-ad-client="ca-pub-3164628254889272"-->
+                 <!--data-ad-slot="1252663305"></ins>-->
+            <!--<script>-->
+              <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+            <!--</script>-->
             <a v-for="(content, index) in list.contents" :key="index"
                :href="'/content/' + content._id + '/'"
                class="list-group-item text-overflow">

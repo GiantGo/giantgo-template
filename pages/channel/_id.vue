@@ -15,28 +15,28 @@
             <div class="col-md-6">
               <game-panel v-for="(list, index) in lists" :key="index" v-if="index % 2 === 0" :list="list"></game-panel>
               <!-- younagames -->
-              <ins class="adsbygoogle"
-                   style="display:block"
-                   data-ad-format="fluid"
-                   data-ad-layout-key="-hz+a-v-4h+ba"
-                   data-ad-client="ca-pub-3164628254889272"
-                   data-ad-slot="1252663305"></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({})
-              </script>
+              <!--<ins class="adsbygoogle"-->
+                   <!--style="display:block"-->
+                   <!--data-ad-format="fluid"-->
+                   <!--data-ad-layout-key="-hz+a-v-4h+ba"-->
+                   <!--data-ad-client="ca-pub-3164628254889272"-->
+                   <!--data-ad-slot="1252663305"></ins>-->
+              <!--<script>-->
+                <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+              <!--</script>-->
             </div>
             <div class="col-md-6">
               <game-panel v-for="(list, index) in lists" :key="index" v-if="index % 2 === 1" :list="list"></game-panel>
               <!-- younagames -->
-              <ins class="adsbygoogle"
-                   style="display:block"
-                   data-ad-format="fluid"
-                   data-ad-layout-key="-hz+a-v-4h+ba"
-                   data-ad-client="ca-pub-3164628254889272"
-                   data-ad-slot="1252663305"></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({})
-              </script>
+              <!--<ins class="adsbygoogle"-->
+                   <!--style="display:block"-->
+                   <!--data-ad-format="fluid"-->
+                   <!--data-ad-layout-key="-hz+a-v-4h+ba"-->
+                   <!--data-ad-client="ca-pub-3164628254889272"-->
+                   <!--data-ad-slot="1252663305"></ins>-->
+              <!--<script>-->
+                <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+              <!--</script>-->
             </div>
           </div>
         </div>

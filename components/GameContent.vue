@@ -34,15 +34,15 @@
               <img alt="download" src="/img/googleplay3.png"/>
             </a>
           </div>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-format="fluid"
-               data-ad-layout-key="-72+eg+1g-3d+2z"
-               data-ad-client="ca-pub-3164628254889272"
-               data-ad-slot="5463726279"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({})
-          </script>
+          <!--<ins class="adsbygoogle"-->
+               <!--style="display:block"-->
+               <!--data-ad-format="fluid"-->
+               <!--data-ad-layout-key="-72+eg+1g-3d+2z"-->
+               <!--data-ad-client="ca-pub-3164628254889272"-->
+               <!--data-ad-slot="5463726279"></ins>-->
+          <!--<script>-->
+            <!--(adsbygoogle = window.adsbygoogle || []).push({})-->
+          <!--</script>-->
           <div class="comment-container">
             <div class="title">
               Comments
@@ -127,7 +127,7 @@
   .detail-info {
     margin-top: 5px;
     padding: 10px;
-    background: $text;
+    background: $bg-color;
     color: $primary-text;
   }
 
@@ -256,7 +256,7 @@
 
   .comment-container {
     padding-bottom: 10px;
-    background: $text;
+    background: $bg-color;
     color: $secondary-text;
   }
 
