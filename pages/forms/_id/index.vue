@@ -99,7 +99,7 @@
     },
     async asyncData ({params}) {
       try {
-        let {data} = await axios.post('http://s2-api.smarket.net.cn/member/form/GetForNewForm', {
+        let {data} = await axios.post('/member/form/GetForNewForm', {
           memberFormId: params.id
         })
 
